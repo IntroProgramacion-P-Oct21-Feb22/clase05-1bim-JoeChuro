@@ -10,6 +10,9 @@
  */
 package ejemplo2;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -21,7 +24,14 @@ public class Ejemplo2 {
      */
     public static void main(String[] args) {
         // Condicionale compuestos
-        double promedio = 7.4;
+        
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        
+        double promedio;
+        
+        System.out.println("Ingresar el promedio del estudiante");
+        promedio = entrada.nextDouble();
 
         if (promedio >= 7.5) {
             System.out.printf("Estudiante aprobado con un "
@@ -30,6 +40,10 @@ public class Ejemplo2 {
             System.out.printf("Estudiante reprobado con un "
                     + "promedio: %.2f\n", promedio);
         }
+    }
+
+    private static double nextLine() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
